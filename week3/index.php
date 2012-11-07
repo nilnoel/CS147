@@ -20,12 +20,22 @@
 		include("config.php");
 		$query = "";
 		
+<<<<<<< HEAD
 		// Don’t be intimidated by the following lines. You can pretty much
 		// always copy and paste these because they’re sort of like
 		// functional bits that never change.
 		$result = mysql_query($query);
 		while ($row = mysql_fetch_assoc($result)) {
 			echo "<p>".$row["title"]."</p>";
+=======
+<?php
+		include("config.php");
+		$query = "select * from books";
+		$result = mysql_query($query);
+		while ($row = mysql_fetch_assoc($result)) {
+			echo "<p>".$row["title"]." by ".$row["author"]."</p>";
+			echo "<img src='".$row["image"]."'/>";
+>>>>>>> ae5197596f01a0a9fd4b79ae521c2b686affdd26
 		}
 		?>
 		</table>
